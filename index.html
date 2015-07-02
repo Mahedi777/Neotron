@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href="style.css" rel="stylesheet" type="text/css">
+		
+		<!-- font-awesome --->
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+		
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	</head>
+	
+	<body>
+	
+		<div id="tf-lightbox">
+			<div class="container">
+				<div class="catagories">
+					<ul class="type1">
+						<li class="pull-left">
+							<h4>Filter By Type</h4>
+						</li>
+						
+						<li class="pull-right">
+							<ol class="type2">
+								<li><a href="#" data-filter="*" class="active">All</a></li>
+								<li><a href="#" data-filter=".web">Web Design</a></li>
+								<li><a href="#" data-filter=".photography">Photography</a></li>
+								<li><a href="#" data-filter=".app">Mobile App</a></li>
+								<li><a href="#" data-filter=".branding">Branding</a></li>
+							</ol>
+						</li>
+					</ul>
+				</div>
+				<div class="clearfix"></div>
+				<div id="lightbox" class="row">
+					<div class="col-md-3 col-sm-6 col-lg-3 branding web">
+						<div class="hover-bg">
+							<a href="#">
+								<div class="hover-text">
+									<h4>Logo Design</h4>
+									<p>Branding</p>
+									<i class="fa fa-plus"></i>
+								</div>
+								<img src="img/portfolio/01.jpg" class="img-responsive" alt="...">
+							</a>
+						</div>
+					</div>	
+					
+					<div class="col-md-3 col-sm-6 col-lg-3 app photography">
+						<div class="hover-bg">
+							<a href="#">
+								<div class="hover-text">
+									<h4>Logo Design</h4>
+									<p>Branding</p>
+									<i class="fa fa-plus"></i>
+								</div>
+								<img src="img/portfolio/02.jpg" class="img-responsive" alt="...">
+							</a>
+						</div>
+					</div>	
+					
+					<div class="col-md-3 col-sm-6 col-lg-3 branding">
+						<div class="hover-bg">
+							<a href="#">
+								<div class="hover-text">
+									<h4>Logo Design</h4>
+									<p>Branding</p>
+									<i class="fa fa-plus"></i>
+								</div>
+								<img src="img/portfolio/03.jpg" class="img-responsive" alt="...">
+							</a>
+						</div>
+					</div>	
+					
+					<div class="col-md-3 col-sm-6 col-lg-3 web">
+						<div class="hover-bg">
+							<a href="#">
+								<div class="hover-text">
+									<h4>Logo Design</h4>
+									<p>Branding</p>
+									<i class="fa fa-plus"></i>
+								</div>
+								<img src="img/portfolio/04.jpg" class="img-responsive" alt="...">
+							</a>
+						</div>
+					</div>	
+					
+					<div class="col-md-3 col-sm-6 col-lg-3 photography web">
+						<div class="hover-bg">
+							<a href="#">
+								<div class="hover-text">
+									<h4>Logo Design</h4>
+									<p>Branding</p>
+									<i class="fa fa-plus"></i>
+								</div>
+								<img src="img/portfolio/05.jpg" class="img-responsive" alt="...">
+							</a>
+						</div>
+					</div>	
+					
+					<div class="col-md-3 col-sm-6 col-lg-3 branding app">
+						<div class="hover-bg">
+							<a href="#">
+								<div class="hover-text">
+									<h4>Logo Design</h4>
+									<p>Branding</p>
+									<i class="fa fa-plus"></i>
+								</div>
+								<img src="img/portfolio/06.jpg" class="img-responsive" alt="...">
+							</a>
+						</div>
+					</div>	
+					
+					<div class="col-md-3 col-sm-6 col-lg-3 photography">
+						<div class="hover-bg">
+							<a href="#">
+								<div class="hover-text">
+									<h4>Logo Design</h4>
+									<p>Branding</p>
+									<i class="fa fa-plus"></i>
+								</div>
+								<img src="img/portfolio/07.jpg" class="img-responsive" alt="...">
+							</a>
+						</div>
+					</div>	
+					
+					<div class="col-md-3 col-sm-6 col-lg-3 web branding">
+						<div class="hover-bg">
+							<a href="#">
+								<div class="hover-text">
+									<h4>Logo Design</h4>
+									<p>Branding</p>
+									<i class="fa fa-plus"></i>
+								</div>
+								<img src="img/portfolio/08.jpg" class="img-responsive" alt="...">
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- jQuery library -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+		<!-- Latest compiled JavaScript -->
+		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+		
+		<script  src="js/jquery.1.11.1.js"></script>
+		<script  src="js/jquery.isotope.js"></script>
+		
+		<script>
+    $(window).load(function() {
+        var $container = $('#lightbox');
+        $container.isotope({
+            filter: '*',
+            animationOptions: {
+                duration: 750,
+                easing: 'linear',
+                queue: false
+            }
+        });
+        $('.type1 a').click(function() {
+            $('.type1 .active').removeClass('active');
+            $(this).addClass('active');
+            var selector = $(this).attr('data-filter');
+            $container.isotope({
+                filter: selector,
+                animationOptions: {
+                    duration: 750,
+                    easing: 'linear',
+                    queue: false
+                }
+            });
+            return false;
+        });
+
+    });;
+		</script>
+	</body>
+</html>
